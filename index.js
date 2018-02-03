@@ -9,21 +9,94 @@ function setCart(c) {
   return cart;
 }
 
+
 function addToCart(item) {
- // write your code here
+  var itemPrice = Math.floor(Math.random() * (100 - 2) + 2)
+  cart.push({[item]: itemPrice})
+  console.log (`${item} has been added to your cart.`)
+  return cart
 }
 
 function viewCart() {
-  // write your code here
+  var cartLength = cart.length;
+  if (cartLength > 0) {
+    var cartContents = [];
+    var n = 0;
+    var i = cartLength-1;
+    while (n < cartLength) {
+        if (n === 0 && cartLength === 1) {
+              let item = cart[n];
+                cartContents.push(` ${Object.keys(item)} at $${item[Object.keys(item)]}.`);
+                n++;
+        } else if (n === i) {
+          let item = cart[n];
+            cartContents.push(` and ${Object.keys(item)} at $${item[Object.keys(item)]}.`);
+            n++;
+          } else if (cartLength === 2) {
+            let item = cart[n];
+            cartContents.push(` ${Object.keys(item)} at $${item[Object.keys(item)]}`);
+              n++;
+        } else {
+          let item = cart[n];
+          cartContents.push(` ${Object.keys(item)} at $${item[Object.keys(item)]},`);
+          n++;
+        }
+        }
+        console.log (`In your cart, you have${cartContents.join("")}`);
+      } else {
+        console.log (`Your shopping cart is empty.`);
+      }
 }
 
 function total() {
+  var cartLength = cart.length;
+  var totalPrice = 0;
+      var cartPrices = [];
+      for (let n = 0; n < cartLength; n++) {
+    let item = cart[n];
+    cartPrices.push(`${item[Object.keys(item)]}`);
+  var totalPrice = totalPrice + item[Object.keys(item)];
+  }
+  return totalPrice;
+}
+
+let match = 0;
+let index = 0;
+
+function removeFromCart(item) {
+  var cartLength = cart.length;
+  for (let n = 0; n < cartLength; n++) {
+    let itemToCheck = cart[n];
+    console.log(itemToCheck);
+    var Boolean = itemToCheck.hasOwnProperty(item);
+    console.log(Boolean);
+    if (Boolean === true) {
+      let match = 1;
+      console.log(match);
+      let index = cart.indexOf(itemToCheck);
+      console.log(index);
+  }
+console.log(match);
+}
+function foundOrNot() {
+  if (match > 0) {
+    console.log("We found a match!");
+    cart.splice(index, 1);
+  return cart;
+} else {
+  console.log ("That item is not in your cart.");
+  return cart;
+}
+foundOrNot()
+}
+}
+
+function placeOrder(cardNumber) {
   // write your code here
 }
 
-function removeFromCart(item) {
-  // write your code here
-}
+
+
 
 function placeOrder(cardNumber) {
   // write your code here
