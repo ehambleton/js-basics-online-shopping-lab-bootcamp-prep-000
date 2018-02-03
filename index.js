@@ -72,25 +72,23 @@ function removeFromCart(item) {
     var Boolean = itemToCheck.hasOwnProperty(item);
     console.log(Boolean);
     if (Boolean === true) {
-      let match = 1;
+      match++;
       console.log(match);
       let index = cart.indexOf(itemToCheck);
       console.log(index);
   }
-console.log(match);
 }
-function foundOrNot() {
-  if (match > 0) {
+console.log(match);
+console.log(index);
+  if (match === 1) {
     console.log("We found a match!");
     cart.splice(index, 1);
-  return cart;
 } else {
   console.log ("That item is not in your cart.");
+}
   return cart;
 }
-foundOrNot()
-}
-}
+
 
 function placeOrder(cardNumber) {
   // write your code here
