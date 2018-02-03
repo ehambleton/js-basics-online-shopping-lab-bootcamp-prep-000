@@ -97,7 +97,7 @@ if (cardNumber === undefined) {
   console.log ("Sorry, we don\'t have a credit card on file for you.")
 } else {
   var totalPrice = total()
-  console.log (`Your total cost is $${totalPrice}, which will be charged to ${creditCardNumber}.`);
+  console.log (`Your total cost is $${totalPrice}, which will be charged to the card ${creditCardNumber}.`);
   cart = []
 }
 }
