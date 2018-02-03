@@ -65,7 +65,7 @@ function total() {
 function removeFromCart(item) {
   var cartLength = cart.length;
   let match = 0;
-  var index;
+  var index = 0;
   for (let n = 0; n < cartLength; n++) {
     let itemToCheck = cart[n];
     console.log(itemToCheck);
