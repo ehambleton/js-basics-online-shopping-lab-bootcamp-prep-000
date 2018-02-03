@@ -74,7 +74,7 @@ function removeFromCart(item) {
     if (Boolean === true) {
       match++;
       console.log(match);
-      let index = cart.indexOf(itemToCheck);
+      var index = cart.indexOf(itemToCheck);
       console.log(index);
   }
 }
