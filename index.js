@@ -91,7 +91,7 @@ console.log(index);
 
 
 function placeOrder(cardNumber) {
-if (cardNumber <=== 0) {
+if (cardNumber <= 0) {
   console.log ("Sorry, we don't have a credit card on file for you.")
 }
 }
