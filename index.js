@@ -51,6 +51,7 @@ function viewCart() {
 
 function total() {
   var cartLength = cart.length;
+  var totalPrice = 0;
       var cartPrices = [];
       for (let n = 0; n < cartLength; n++) {
     let item = cart[n];
